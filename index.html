@@ -5,86 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TSOM Coding Club Workshop Schedule</title>
     <style>
+        /* Overall styling for the body */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
+            background-color: #f4f4f9;
+            color: #333;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
+        
+        /* Container styling */
         .container {
             width: 90%;
             max-width: 1200px;
-            background: #1e1e1e;
+            background: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            margin: auto;
+            border: 1px solid #ddd;
         }
+        
+        /* Heading styles */
         h1 {
             text-align: center;
-            color: #e0e0e0;
             margin-bottom: 30px;
             font-size: 2.5rem;
             font-weight: 600;
-            border-bottom: 4px solid #007bff;
+            border-bottom: 4px solid #ff6347;
             padding-bottom: 15px;
+            background: linear-gradient(90deg, rgba(255,99,71,1) 0%, rgba(255,140,0,1) 35%, rgba(255,165,0,1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 500;
+            border-bottom: 3px solid #ff6347;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* Table styling */
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: #2c2c2c;
+            background-color: #f9f9f9;
             border-radius: 10px;
             overflow: hidden;
+            margin-bottom: 30px;
+            table-layout: fixed;
         }
+        
         th, td {
             padding: 12px 15px;
             text-align: left;
             font-size: 1rem;
             line-height: 1.5;
+            word-wrap: break-word;
         }
+        
         thead {
-            background: #007bff;
+            background: #ff6347;
             color: #fff;
         }
+        
         th {
             font-size: 1.1rem;
         }
+        
         tbody tr {
-            border-bottom: 1px solid #444;
-        }
-        tbody tr:nth-child(even) {
-            background-color: #333;
-        }
-        tbody tr:hover {
-            background-color: #444;
+            border-bottom: 1px solid #ddd;
             transition: background-color 0.3s ease;
         }
+        
+        tbody tr:nth-child(even) {
+            background-color: #eee;
+        }
+        
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Link styling */
         a {
-            color: #1e90ff;
+            color: #ff4500;
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.3s ease;
         }
+
         a:hover {
+            color: #cc3700;
             text-decoration: underline;
         }
+
+        /* Caption styling */
         caption {
             padding: 10px;
             font-size: 1.2rem;
             font-weight: 600;
-            color: #1e90ff;
+            color: #ff4500;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>TSOM Coding Club Workshop Schedule</h1>
+        <h2>Section 1: Foundations</h2>
         <table>
-            <caption>Workshop Overview</caption>
+            <caption>Foundations Overview</caption>
             <thead>
                 <tr>
                     <th>Stage</th>
@@ -116,6 +151,21 @@
                     <td>Additional CSS resources</td>
                     <td>2-HOUR session on Landing Page (August 22, 2024)</td>
                 </tr>
+            </tbody>
+        </table>
+        <h2>Section 2: Application Development</h2>
+        <table>
+            <caption>Application Development Overview</caption>
+            <thead>
+                <tr>
+                    <th>Stage</th>
+                    <th>Action</th>
+                    <th>Resource Available</th>
+                    <th>Additional Resources Required</th>
+                    <th>Timeline</th>
+                </tr>
+            </thead>
+            <tbody>
                 <tr>
                     <td>Stage 4</td>
                     <td>JavaScript Crash Course</td>
@@ -139,17 +189,17 @@
                 </tr>
                 <tr>
                     <td>Stage 7</td>
-                    <td>Develop a JavaScript Game</td>
-                    <td>JavaScript knowledge from previous stages</td>
-                    <td>Game development resources</td>
-                    <td>2-HOUR session on JavaScript Game (September 19, 2024)</td>
-                </tr>
-                <tr>
-                    <td>Stage 8</td>
                     <td>Build an Interactive Quiz App</td>
                     <td>JavaScript knowledge from previous stages</td>
                     <td>Quiz content and assets</td>
-                    <td>2-HOUR session on Quiz App (September 26, 2024)</td>
+                    <td>2-HOUR session on Quiz App (September 19, 2024)</td>
+                </tr>
+                <tr>
+                    <td>Stage 8</td>
+                    <td>Develop a JavaScript Game</td>
+                    <td>JavaScript knowledge from previous stages</td>
+                    <td>Game development resources</td>
+                    <td>2-HOUR session on JavaScript Game (September 26, 2024)</td>
                 </tr>
             </tbody>
         </table>
