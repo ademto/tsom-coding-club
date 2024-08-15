@@ -5,103 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TSOM Coding Club Workshop Schedule</title>
     <style>
-        /* Overall styling for the body */
+        /* Base styles for the body */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
             color: #333;
             margin: 0;
             padding: 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             min-height: 100vh;
         }
 
         /* Container styling */
         .container {
-            width: 90%;
+            width: 100%;
             max-width: 1200px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            border: 1px solid #ddd;
         }
 
         /* Heading styles */
         h1 {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             font-size: 2.5rem;
-            font-weight: 600;
-            border-bottom: 4px solid #ff6347;
-            padding-bottom: 15px;
-            background: linear-gradient(90deg, rgba(255,99,71,1) 0%, rgba(255,140,0,1) 35%, rgba(255,165,0,1) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            color: #4a90e2;
+            letter-spacing: 1px;
         }
 
         h2 {
-            font-size: 2rem;
-            font-weight: 500;
-            border-bottom: 3px solid #ff6347;
-            padding-bottom: 10px;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Card styling */
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         /* Table styling */
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 30px;
-            table-layout: fixed;
+            margin-bottom: 0;
         }
 
         th, td {
-            padding: 12px 15px;
+            padding: 15px;
             text-align: left;
             font-size: 1rem;
-            line-height: 1.5;
-            word-wrap: break-word;
+            border-bottom: 1px solid #eee;
         }
 
         thead {
-            background: #ff6347;
-            color: #fff;
+            background-color: #f4f4f9;
         }
 
         th {
             font-size: 1.1rem;
-        }
-
-        tbody tr {
-            border-bottom: 1px solid #ddd;
-            transition: background-color 0.3s ease;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #eee;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #4a90e2;
         }
 
         tbody tr:hover {
-            background-color: #ddd;
+            background-color: #f9f9f9;
         }
 
-        /* Link styling */
+        /* Link styles */
         a {
-            color: #ff4500;
+            color: #4a90e2;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         a:hover {
-            color: #cc3700;
+            color: #357ab8;
             text-decoration: underline;
         }
 
@@ -110,117 +104,251 @@
             padding: 10px;
             font-size: 1.2rem;
             font-weight: 600;
-            color: #ff4500;
+            color: #333;
+            text-align: left;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            th, td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>TSOM Coding Club Workshop Schedule</h1>
-        <h2>Section 1: Foundations</h2>
-        <table>
-            <caption>Foundations Overview</caption>
-            <thead>
-                <tr>
-                    <th>Stage</th>
-                    <th>Action</th>
-                    <th>Resource Available</th>
-                    <th>Additional Resources Required</th>
-                    <th>Timeline</th>
-                    <th>Time & Venue</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Stage 1</td>
-                    <td>HTML & CSS Crash Course</td>
-                    <td><a href="https://youtu.be/GAZVvpjxYQY?si=ryQzPtVPOuCVtLMw">Video Tutorial</a></td>
-                    <td><a href="https://perlego.com/book/4086676/html-and-css-the-comprehensive-guide-pdf/?utm_medium=share&utm_source=perlego&utm_campaign=share-book">Book: HTML and CSS The Comprehensive Guide by Jürgen Wolf</a></td>
-                    <td>2-HOUR workshop on HTML & CSS (August 9, 2024)</td>
-                    <td>Time: 1:00 PM<br>
-                        Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
-                </tr>
-                <tr>
-                    <td>Stage 2</td>
-                    <td>Create a Personal Website</td>
-                    <td>HTML and CSS knowledge from previous stage</td>
-                    <td>Hosting service</td>
-                    <td>2-HOUR session on Personal Website (August 16, 2024)</td>
-                    <td>Time: 1:00 PM<br>
-                        Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
-                </tr>
-                <tr>
-                    <td>Stage 3</td>
-                    <td>Design a Landing Page</td>
-                    <td><a href="https://www.w3schools.com/css/default.asp">CSS Resources</a></td>
-                    <td>Additional CSS resources</td>
-                    <td>2-HOUR session on Landing Page (August 23, 2024)</td>
-                    <td>Time: 1:00 PM<br>
-                        Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <h2>Section 2: Application Development</h2>
-        <table>
-            <caption>Application Development Overview</caption>
-            <thead>
-                <tr>
-                    <th>Stage</th>
-                    <th>Action</th>
-                    <th>Resource Available</th>
-                    <th>Additional Resources Required</th>
-                    <th>Timeline</th>
-                    <th>Time & Venue</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Stage 4</td>
-                    <td>JavaScript Crash Course</td>
-                    <td><a href="https://youtube.com/playlist?list=PLjwm_8O3suyM61TZY1w5ufD12nRQCtd2N&si=-mHk9ClMJcJvJIY5">Video Tutorial</a></td>
-                    <td><a href="https://perlego.com/book/3165498/javascript-from-beginner-to-professional-pdf/?utm_medium=share&utm_source=perlego&utm_campaign=share-book">Book: JavaScript from Beginner to Professional</a></td>
-                    <td>2-HOUR JavaScript crash course (August 30, 2024)</td>
-                    <td>Time: 1:00 PM<br>
-                        Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
-                </tr>
-                <tr>
-                    <td>Stage 5</td>
-                    <td>Build a To-Do List App</td>
-                    <td>JavaScript knowledge from previous stage</td>
-                    <td>Development tools</td>
-                    <td>2-HOUR session on To-Do List App (September 6, 2024)</td>
-                    <td>Time: 1:00 PM<br>
-                        Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
-                </tr>
-                <tr>
-                    <td>Stage 6</td>
-                    <td>Create a Photo Gallery</td>
-                    <td>HTML, CSS, and JavaScript knowledge</td>
-                    <td>Photo assets</td>
-                    <td>2-HOUR session on Photo Gallery (September 13, 2024)</td>
-                    <td>Time: 1:00 PM<br>
-                        Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
-                </tr>
-                <tr>
-                    <td>Stage 7</td>
-                    <td>Build an Interactive Quiz App</td>
-                    <td>JavaScript knowledge from previous stages</td>
-                    <td>Quiz content and assets</td>
-                    <td>2-HOUR session on Quiz App (September 20, 2024)</td>
-                    <td>Time: 1:00 PM<br>
-                        Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
-                </tr>
-                <tr>
-                    <td>Stage 8</td>
-                    <td>Develop a JavaScript Game</td>
-                    <td>JavaScript knowledge from previous stages</td>
-                    <td>Game development resources</td>
-                    <td>2-HOUR session on JavaScript Game (September 27, 2024)</td>
-                    <td>Time: 1:00 PM<br>
-                        Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
-                </tr>
-            </tbody>
-        </table>
+
+        <!-- Stage 1: HTML & CSS Crash Course -->
+        <div class="card">
+            <h2>Stage 1: HTML & CSS Crash Course</h2>
+            <table>
+                <caption>Actions, Resources, and Timeline</caption>
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Resource Available</th>
+                        <th>Additional Resources Required</th>
+                        <th>Timeline</th>
+                        <th>Time & Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Learn the basics of HTML & CSS</td>
+                        <td><a href="https://youtu.be/GAZVvpjxYQY?si=ryQzPtVPOuCVtLMw">Video Tutorial</a></td>
+                        <td><a href="https://perlego.com/book/4086676/html-and-css-the-comprehensive-guide-pdf/?utm_medium=share&utm_source=perlego&utm_campaign=share-book">Book: HTML and CSS The Comprehensive Guide by Jürgen Wolf</a></td>
+                        <td>August 9, 2024</td>
+                        <td>Time: 1:00 PM<br>
+                            Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Stage 2: Design a Landing Page -->
+        <div class="card">
+            <h2>Stage 2: Design a Landing Page</h2>
+            <table>
+                <caption>Actions, Resources, and Timeline</caption>
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Resource Available</th>
+                        <th>Additional Resources Required</th>
+                        <th>Timeline</th>
+                        <th>Time & Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Create a visually appealing landing page</td>
+                        <td><a href="https://www.w3schools.com/css/default.asp">CSS Resources</a></td>
+                        <td>Additional CSS resources</td>
+                        <td>August 16, 2024</td>
+                        <td>Time: 1:00 PM<br>
+                            Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Stage 3: Create a Personal Website -->
+        <div class="card">
+            <h2>Stage 3: Create a Personal Website</h2>
+            <table>
+                <caption>Actions, Resources, and Timeline</caption>
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Resource Available</th>
+                        <th>Additional Resources Required</th>
+                        <th>Timeline</th>
+                        <th>Time & Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Build and publish your own personal website</td>
+                        <td>HTML and CSS knowledge from previous stages</td>
+                        <td>Hosting service</td>
+                        <td>August 23, 2024</td>
+                        <td>Time: 1:00 PM<br>
+                            Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Stage 4: JavaScript Crash Course -->
+        <div class="card">
+            <h2>Stage 4: JavaScript Crash Course</h2>
+            <table>
+                <caption>Actions, Resources, and Timeline</caption>
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Resource Available</th>
+                        <th>Additional Resources Required</th>
+                        <th>Timeline</th>
+                        <th>Time & Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Learn the basics of JavaScript</td>
+                        <td><a href="https://youtube.com/playlist?list=PLjwm_8O3suyM61TZY1w5ufD12nRQCtd2N&si=-mHk9ClMJcJvJIY5">Video Tutorial</a></td>
+                        <td><a href="https://perlego.com/book/3165498/javascript-from-beginner-to-professional-pdf/?utm_medium=share&utm_source=perlego&utm_campaign=share-book">Book: JavaScript from Beginner to Professional</a></td>
+                        <td>August 30, 2024</td>
+                        <td>Time: 1:00 PM<br>
+                            Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Stage 5: Build a To-Do List App -->
+        <div class="card">
+            <h2>Stage 5: Build a To-Do List App</h2>
+            <table>
+                <caption>Actions, Resources, and Timeline</caption>
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Resource Available</th>
+                        <th>Additional Resources Required</th>
+                        <th>Timeline</th>
+                        <th>Time & Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Create a functional to-do list app</td>
+                        <td>JavaScript knowledge from previous stages</td>
+                        <td>Development tools</td>
+                        <td>September 6, 2024</td>
+                        <td>Time: 1:00 PM<br>
+                            Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Stage 6: Create a Photo Gallery -->
+        <div class="card">
+            <h2>Stage 6: Create a Photo Gallery</h2>
+            <table>
+                <caption>Actions, Resources, and Timeline</caption>
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Resource Available</th>
+                        <th>Additional Resources Required</th>
+                        <th>Timeline</th>
+                        <th>Time & Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Build a photo gallery using HTML, CSS, and JavaScript</td>
+                        <td>HTML, CSS, and JavaScript knowledge</td>
+                        <td>Photo assets</td>
+                        <td>September 13, 2024</td>
+                        <td>Time: 1:00 PM<br>
+                            Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Stage 7: Build an Interactive Quiz App -->
+        <div class="card">
+            <h2>Stage 7: Build an Interactive Quiz App</h2>
+            <table>
+                <caption>Actions, Resources, and Timeline</caption>
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Resource Available</th>
+                        <th>Additional Resources Required</th>
+                        <th>Timeline</th>
+                        <th>Time & Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Create an interactive quiz application</td>
+                        <td>JavaScript knowledge from previous stages</td>
+                        <td>Quiz content and assets</td>
+                        <td>September 20, 2024</td>
+                        <td>Time: 1:00 PM<br>
+                            Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Stage 8: Develop a JavaScript Game -->
+        <div class="card">
+            <h2>Stage 8: Develop a JavaScript Game</h2>
+            <table>
+                <caption>Actions, Resources, and Timeline</caption>
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Resource Available</th>
+                        <th>Additional Resources Required</th>
+                        <th>Timeline</th>
+                        <th>Time & Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Develop a simple JavaScript-based game</td>
+                        <td>JavaScript knowledge from previous stages</td>
+                        <td>Game development resources</td>
+                        <td>September 27, 2024</td>
+                        <td>Time: 1:00 PM<br>
+                            Venue: <a href="https://teams.microsoft.com/l/meetup-join/19%3avJzSSu95hKpyQosPaCbat6VAOMHpz3DQxuth58LoJFg1%40thread.tacv2/1723138870511?context=%7b%22Tid%22%3a%22f5622c43-8e64-4863-aed4-0cc4908d3c88%22%2c%22Oid%22%3a%22d76cfb0d-6ca8-4c5a-81c1-b9b0bd8da75b%22%7d">Microsoft Teams</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>
+
